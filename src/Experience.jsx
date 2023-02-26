@@ -1,6 +1,7 @@
 import { useFrame } from '@react-three/fiber';
 import { OrbitControls } from '@react-three/drei';
 import { useRef } from 'react';
+import Plane from './Plane';
 
 export default function Experience() {
   const cube = useRef();
@@ -26,10 +27,7 @@ export default function Experience() {
         <meshStandardMaterial color="teal" />
       </mesh>
 
-      <mesh position-y={-1} rotation-x={-Math.PI * 0.5} scale={10}>
-        <planeGeometry />
-        <meshStandardMaterial color="orange" />
-      </mesh>
+      <Plane />
     </>
   );
 }
